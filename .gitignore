@@ -1,0 +1,18 @@
+*.exe
+*.dll
+*.o
+
+*.p
+*.wav
+
+#Presentation
+/present/*
+
+*.pdf
+
+#Latex staff
+*.aux
+*.log
+*.png
+*.out
+*.toc
