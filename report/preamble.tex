@@ -3,6 +3,7 @@
 \usepackage[english, russian]{babel}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=1cm]{geometry}
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage[pdftex]{graphicx}
 \usepackage{mathtools}
 \usepackage{enumerate}
 \usepackage{xcolor}
@@ -22,11 +23,8 @@
 \@addtoreset{subsection}{part}
 \makeatother
 
-%\renewcommand{\theenumi}{(\asbuk{enumi})}
-%\renewcommand{\labelenumi}{\asbuk{enumi})}
 \renewcommand*{\thesection}{\arabic{section}.}
 \renewcommand*{\thesubsection}{\arabic{section}.\arabic{subsection}.}
-%\renewcommand{\labelitemi}{---}
 
 \newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
 {\hbox{$\mathsurround=0pt #1$}}{}}
