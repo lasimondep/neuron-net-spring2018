@@ -8,9 +8,7 @@
 #Presentation
 /present/*
 
-*.pdf
-
-#Latex staff
+#Latex stuff
 *.aux
 *.log
 *.png
