@@ -12,6 +12,11 @@ all: $(OBJS)
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
 	$(OPT) $< -o $@
 
+install:
+	mkdir -p $(OBJ_PATH)
+	mkdir -p ./wav/broken
+	mkdir -p ./wav/whole
+
 pred: $(PRED_PATH)predictors.exe
 	python $(PRED_PATH)wavetransform.py
 	start $(PRED_PATH)predictors.exe
