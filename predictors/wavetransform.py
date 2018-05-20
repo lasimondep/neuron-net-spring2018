@@ -3,7 +3,6 @@ import wave
 import numpy as np
 from numpy import array, arange, abs as np_abs
 from numpy.fft import rfft, rfftfreq
-import matplotlib.pyplot as plt
 
 types = {
     1: np.int8,
@@ -28,14 +27,6 @@ def transform(st):
 		for j in range(len(RFFT)):
 			print(RFFT[j], end=' ', file=File)
 		print(file=File)
-		"""
-		plt.plot(rfftfreq(N, 1./FD), np_abs(spectrum)/N)
-		plt.xlabel('Hz')
-		plt.ylabel('mV')
-		plt.title('Spec')
-		plt.grid(True)
-		plt.savefig(str(i) + '.png')
-		"""
 
 transform('broken')
 transform('whole')
