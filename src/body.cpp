@@ -23,11 +23,12 @@ void learning(const size_t n, const vector <double> input[], const vector <bool>
 }
 
 double check(size_t n, NeuronNet &net, const vector <double> input[], const vector <bool> &y) {
-	double res(0), tmp;
+	double tmp;
+	int res(0);
 	for (size_t i(0); i < n; ++i) {
 		tmp = net.forward_pass(input[i]);
-		printf("Propogation: %.5lf => %s [%s]\n", tmp, tmp < 0.5 ? "broken" : "whole", y[i] ? "WHOLE" : "BROKEN");
-		res += target(y[i], tmp);
+		printf("%.5lf => %s [%s]\n", tmp, tmp < 0.5 ? "broken" : "whole", y[i] ? "WHOLE" : "BROKEN");
+		res += ((tmp < 0.5) && y[i]) || ((tmp >= 0.5) && !y[i]);
 	}
-	return res / n;
+	return res * 100.0 / n;
 }

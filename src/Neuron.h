@@ -10,8 +10,8 @@ class Neuron {
 	vector <double> weights;
 	public:
 	Neuron() {}
-	Neuron(size_t);
-	double summatory(const vector <double> &);
-	double activation(double sum);
+	Neuron(size_t, double(*)(double));
+	double summatory(const vector <double>&);
+	double (*activation)(double);
 	friend class NeuronNet;
 };
